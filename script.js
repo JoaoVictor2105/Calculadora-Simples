@@ -34,9 +34,19 @@ datacalculate.addEventListener('click', () => {
     else if (operator === '-') {result = parseInt(previousValue) - parseInt(currentValue)}
     else if (operator === '*') {result = parseInt(previousValue) * parseInt(currentValue)}
     else if (operator === '/') {result = parseInt(previousValue) / parseInt(currentValue)}
-
-display.textContent = result
-previousoperand.textContent = ''
-currentValue = String(result)
-operator = null
+    
+    display.textContent = result
+    previousoperand.textContent = ''
+    currentValue = String(result)
+    operator = null
 });
+
+dataclear.addEventListener('click', () =>  {
+     currentValue = '0';
+     previousValue = '';
+     operator = null;
+     
+     display.textContent = '0'
+     previousoperand.textContent = ''
+     result = null
+    })
