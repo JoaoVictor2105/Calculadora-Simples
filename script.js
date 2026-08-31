@@ -30,12 +30,12 @@ previousoperand.textContent = previousValue + ' '+ chosenOperator;
 
 let result = null;
 datacalculate.addEventListener('click', () => {
-    if (operator === '+') {result = parseInt(previousValue) + parseInt(currentValue)}
-    else if (operator === '-') {result = parseInt(previousValue) - parseInt(currentValue)}
-    else if (operator === '*') {result = parseInt(previousValue) * parseInt(currentValue)}
-    else if (operator === '/') {result = parseInt(previousValue) / parseInt(currentValue)}
+    if (operator === '+') {result = parseFloat(previousValue) + parseFloat(currentValue)}
+    else if (operator === '-') {result = parseFloat(previousValue) - parseFloat(currentValue)}
+    else if (operator === '*') {result = parseFloat(previousValue) * parseFloat(currentValue)}
+    else if (operator === '/') {result = parseFloat(previousValue) / parseFloat(currentValue)}
     
-    display.textContent = result
+    display.textContent = result.toFixed(3)
     previousoperand.textContent = ''
     currentValue = String(result)
     operator = null
@@ -50,3 +50,8 @@ dataclear.addEventListener('click', () =>  {
      previousoperand.textContent = ''
      result = null
     })
+
+datadecimal.addEventListener('click', () => {
+    if (!currentValue.includes('.')) {currentValue += '.'}
+    display.textContent = currentValue
+})
