@@ -35,6 +35,7 @@ datacalculate.addEventListener('click', () => {
     else if (operator === '*') {result = parseFloat(previousValue) * parseFloat(currentValue)}
     else if (operator === '/') {result = parseFloat(previousValue) / parseFloat(currentValue)}
     
+    result = parseFloat(result.toFixed(2))
     display.textContent = result
     previousoperand.textContent = ''
     currentValue = String(result)
