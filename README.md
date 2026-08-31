@@ -2,7 +2,7 @@
 
 Calculadora interativa criada como projeto de estudo. A estrutura (HTML) e o estilo visual (CSS) foram montados com apoio de IA como ponto de partida; toda a lógica de funcionamento — manipulação do DOM, eventos de clique, gerenciamento de estado e operações matemáticas — foi escrita em JavaScript por mim.
 
-🔗 **Teste ao vivo:** https://JoaoVictor2105.github.io/Calculadora-Simples/
+🔗 **Teste ao vivo:** [Calculadora-Simples](https://joaovictor2105.github.io/Calculadora-Simples/)
 
 ## 📁 Estrutura do projeto
 
